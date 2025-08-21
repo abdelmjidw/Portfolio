@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaGithub, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
+import "./me.svg";
 import "./Home.css";
 
 function Home() {
@@ -41,11 +42,15 @@ function Home() {
   }, []);
 
   const handleContact = () => {
-    window.location.href = "mailto:abdelmjidmoumni78@gmail.com?subject=Contacting You&body=Hello, I would like to get in touch!";
+    window.location.href =
+      "mailto:abdelmjidmoumni78@gmail.com?subject=Contacting You&body=Hello, I would like to get in touch!";
   };
 
   const handleDownloadCV = () => {
-    window.open("https://drive.google.com/file/d/1ar7Yny5jPkI264WL7pg13EPu8ux8OpBX/view?usp=sharing", "_blank");
+    window.open(
+      "https://drive.google.com/file/d/1ar7Yny5jPkI264WL7pg13EPu8ux8OpBX/view?usp=sharing",
+      "_blank"
+    );
   };
 
   const toggleMenu = () => {
@@ -58,10 +63,26 @@ function Home() {
         <h1 className="logo">MjidOux</h1>
 
         <div className={`nav-list ${menuOpen ? "show" : ""}`}>
-          <li><a href="#Home" onClick={toggleMenu}>Home</a></li>
-          <li><a href="#About" onClick={toggleMenu}>About</a></li>
-          <li><a href="#Experience" onClick={toggleMenu}>Experience</a></li>
-          <li><a href="#Contact" onClick={toggleMenu}>Contact</a></li>
+          <li>
+            <a href="#Home" onClick={toggleMenu}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#About" onClick={toggleMenu}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#Experience" onClick={toggleMenu}>
+              Experience
+            </a>
+          </li>
+          <li>
+            <a href="#Contact" onClick={toggleMenu}>
+              Contact
+            </a>
+          </li>
         </div>
 
         <div className="burger" onClick={toggleMenu}>
@@ -73,7 +94,12 @@ function Home() {
 
       <div className="main" id="Home">
         <div className="home">
-          <img className="me" src="images/Me.svg" alt="Portrait of AbdeLmajid Moumni" />
+          <img
+            className="me"
+            src="/images/Me.png"
+            alt="Portrait of AbdeLmajid Moumni"
+          />
+
           <div className="text">
             <h1 className="name">AbdeLmajid Moumni</h1>
             <h3 className="do">
@@ -134,16 +160,89 @@ function Home() {
             using Figma.
           </p>
         </div>
+        <div className="projects">
+          <h1>Projects</h1>
+          <div className="fullpro">
+            <div className="project">
+              <img
+                src="https://www.jobnme.com/wp-content/uploads/2024/10/cropped-cropped-cropped-cropped-J-1-e1728299976752-1.png"
+                width={160}
+                alt="JobNme Logo"
+                className="jobnme"
+              />
+              <div className="info">
+                <h1 className="company-name">Jobnme</h1>
+                <p>Developed using React.js, Laravel an MySql for Database</p>
+              </div>
+            </div>
+            <div className="project">
+              <img
+                src="https://www.jobnme.com/wp-content/uploads/2024/10/cropped-cropped-cropped-cropped-J-1-e1728299976752-1.png"
+                width={160}
+                alt="JobNme Logo"
+                className="jobnme"
+              />
+              <div className="info">
+                <h1 className="company-name">Jobnme</h1>
+                <p>Developed using React.js, Laravel an MySql for Database</p>
+              </div>
+            </div>
+            <div className="project">
+              <img
+                src="https://www.jobnme.com/wp-content/uploads/2024/10/cropped-cropped-cropped-cropped-J-1-e1728299976752-1.png"
+                width={160}
+                alt="JobNme Logo"
+                className="jobnme"
+              />
+              <div className="info">
+                <h1 className="company-name">Jobnme</h1>
+                <p>Developed using React.js, Laravel an MySql for Database</p>
+              </div>
+            </div>{" "}
+          </div>
+        </div>
       </div>
 
       <footer id="Contact">
         <div className="footer-content">
           <h3>Contact Me</h3>
           <ul className="social-links">
-            <li><a href="https://github.com/abdelmjidw" target="_blank" rel="noopener noreferrer"><FaGithub size={25} /></a></li>
-            <li><a href="https://wa.me/0628732477" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={25} /></a></li>
-            <li><a href="https://www.linkedin.com/in/abdelmajid-moumni-b01541338/" target="_blank" rel="noopener noreferrer"><FaLinkedin size={25} /></a></li>
-            <li><a href="https://www.instagram.com/mjid_oux/" target="_blank" rel="noopener noreferrer"><FaInstagram size={25} /></a></li>
+            <li>
+              <a
+                href="https://github.com/abdelmjidw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub size={25} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/0628732477"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp size={25} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/abdelmajid-moumni-b01541338/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size={25} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/mjid_oux/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram size={25} />
+              </a>
+            </li>
           </ul>
         </div>
       </footer>
