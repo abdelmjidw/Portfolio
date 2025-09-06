@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { FaGithub, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
-import "./me.svg";
 import "./Home.css";
-
+import { RiExternalLinkLine } from "react-icons/ri";
 function Home() {
   const roles = [
     "Developer",
@@ -52,6 +51,9 @@ function Home() {
       "_blank"
     );
   };
+  const openLink = () => {
+  window.open("https://github.com/abdelmjidw", "_blank", "noopener,noreferrer");
+};
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -96,7 +98,7 @@ function Home() {
         <div className="home">
           <img
             className="me"
-            src="/images/Me.png"
+            src={`${process.env.PUBLIC_URL}/images/me.svg`}
             alt="Portrait of AbdeLmajid Moumni"
           />
 
@@ -161,7 +163,11 @@ function Home() {
           </p>
         </div>
         <div className="projects">
-          <h1>Projects</h1>
+          <div className="open">
+            <h1>Projects</h1>
+            <RiExternalLinkLine className="icon" onClick={openLink}/>
+          </div>
+
           <div className="fullpro">
             <div className="project">
               <img
@@ -177,28 +183,16 @@ function Home() {
             </div>
             <div className="project">
               <img
-                src="https://www.jobnme.com/wp-content/uploads/2024/10/cropped-cropped-cropped-cropped-J-1-e1728299976752-1.png"
-                width={160}
-                alt="JobNme Logo"
+                src={`${process.env.PUBLIC_URL}/images/logo.webp`}
+                width={70}
+                alt="movies Logo"
                 className="jobnme"
               />
               <div className="info">
-                <h1 className="company-name">Jobnme</h1>
+                <h1 className="company-name">Movies Star</h1>
                 <p>Developed using React.js, Laravel an MySql for Database</p>
               </div>
             </div>
-            <div className="project">
-              <img
-                src="https://www.jobnme.com/wp-content/uploads/2024/10/cropped-cropped-cropped-cropped-J-1-e1728299976752-1.png"
-                width={160}
-                alt="JobNme Logo"
-                className="jobnme"
-              />
-              <div className="info">
-                <h1 className="company-name">Jobnme</h1>
-                <p>Developed using React.js, Laravel an MySql for Database</p>
-              </div>
-            </div>{" "}
           </div>
         </div>
       </div>
@@ -227,7 +221,7 @@ function Home() {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/abdelmajid-moumni-b01541338/"
+                href="https://www.linkedin.com/in/abdelmajid-moumni-a46b4837b/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
