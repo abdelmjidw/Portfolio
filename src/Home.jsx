@@ -98,7 +98,7 @@ function Home() {
         <div className="home">
           <img
             className="me"
-            src={`${process.env.PUBLIC_URL}/images/me.svg`}
+            src="https://imgs.search.brave.com/3ngdF01d62-z2l2FyCHBL8_VPpM-lARsKWj30-PeTGE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS12ZWN0/b3Ivc29mdHdhcmUt/ZGV2ZWxvcGVyLXZl/Y3Rvci1pbGx1c3Ry/YXRpb24tY29tbXVu/aWNhdGlvbi10ZWNo/bm9sb2d5LWN5YmVy/LXNlY3VyaXR5XzEy/NDk4NjctNTQ1Ny5q/cGc_c2VtdD1haXNf/aW5jb21pbmcmdz03/NDAmcT04MA"
             alt="Portrait of AbdeLmajid Moumni"
           />
 
