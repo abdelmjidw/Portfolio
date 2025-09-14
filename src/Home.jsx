@@ -127,8 +127,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="section">
-        <div className="about-me" id="About">
+      <div className="section" id="About">
+        <div className="about-me">
           <h1 className="about">About Me</h1>
           <p className="description">
             I'm AbdeLmajid Moumni (MjidOux), a full-stack developer skilled in
@@ -163,7 +163,7 @@ function Home() {
           </p>
         </div>
         <div className="projects">
-          <div className="open">
+          <div className="open ">
             <h1>Projects</h1>
             <RiExternalLinkLine className="icon" onClick={openLink}/>
           </div>
