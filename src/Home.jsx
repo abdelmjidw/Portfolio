@@ -47,7 +47,7 @@ function Home() {
 
   const handleDownloadCV = () => {
     window.open(
-      "https://drive.google.com/file/d/1ar7Yny5jPkI264WL7pg13EPu8ux8OpBX/view?usp=sharing",
+      "https://drive.google.com/file/d/1ar7Yny5jPkI264WL7pg13EPu8ux8OpBX/view?usp=drive_link",
       "_blank"
     );
   };
