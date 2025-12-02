@@ -197,22 +197,25 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   color: #fff;
 }
 .fullpro {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   place-items: center;
   width: 70%;
   gap: 30px;
+  margin: 70px auto;
 }
 
 .project {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  height: 130px;
+  flex-direction: column;
+  height: 230px;
+
   gap: 15px;
 }
 .info {
@@ -250,6 +253,13 @@ button {
 }
 .jobnme {
   border-radius: 10px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  transition: all 0.3s ease;
+}
+.jobnme:hover {
+  transform: scale(1.05);
 }
 .info h1 {
   font-size: 25px;

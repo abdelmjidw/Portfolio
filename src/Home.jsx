@@ -3,6 +3,7 @@ import { FaGithub, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import "./Home.css";
 import { RiExternalLinkLine } from "react-icons/ri";
+import { motion } from "framer-motion";
 function Home() {
   const roles = [
     "Developer",
@@ -15,6 +16,11 @@ function Home() {
   const [displayText, setDisplayText] = useState("");
   const [charIndex, setCharIndex] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false); // For burger toggle
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   // Typing effect
   useEffect(() => {
@@ -52,8 +58,12 @@ function Home() {
     );
   };
   const openLink = () => {
-  window.open("https://github.com/abdelmjidw", "_blank", "noopener,noreferrer");
-};
+    window.open(
+      "https://github.com/abdelmjidw",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -96,13 +106,25 @@ function Home() {
 
       <div className="main" id="Home">
         <div className="home">
-          <img
-            className="me"
-            src="https://imgs.search.brave.com/3ngdF01d62-z2l2FyCHBL8_VPpM-lARsKWj30-PeTGE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS12ZWN0/b3Ivc29mdHdhcmUt/ZGV2ZWxvcGVyLXZl/Y3Rvci1pbGx1c3Ry/YXRpb24tY29tbXVu/aWNhdGlvbi10ZWNo/bm9sb2d5LWN5YmVy/LXNlY3VyaXR5XzEy/NDk4NjctNTQ1Ny5q/cGc_c2VtdD1haXNf/aW5jb21pbmcmdz03/NDAmcT04MA"
-            alt="Portrait of AbdeLmajid Moumni"
-          />
+          <motion.div
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
+          >
+            {" "}
+            <img
+              className="me"
+              src="https://imgs.search.brave.com/3ngdF01d62-z2l2FyCHBL8_VPpM-lARsKWj30-PeTGE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS12ZWN0/b3Ivc29mdHdhcmUt/ZGV2ZWxvcGVyLXZl/Y3Rvci1pbGx1c3Ry/YXRpb24tY29tbXVu/aWNhdGlvbi10ZWNo/bm9sb2d5LWN5YmVy/LXNlY3VyaXR5XzEy/NDk4NjctNTQ1Ny5q/cGc_c2VtdD1haXNf/aW5jb21pbmcmdz03/NDAmcT04MA"
+              alt="Portrait of AbdeLmajid Moumni"
+            />
+          </motion.div>
 
-          <div className="text">
+          <motion.div
+            className="text"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <h1 className="name">AbdeLmajid Moumni</h1>
             <h3 className="do">
               I'm <span className="typing">{displayText}</span>
@@ -115,20 +137,33 @@ function Home() {
               clean, functional solutions. Always learning, always building —
               from idea to full deployment.
             </p>
-          </div>
-          <div className="check">
+          </motion.div>
+          <motion.div
+            className="check"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <button className="click1" onClick={handleContact}>
               Contact Me
             </button>
             <button className="click2" onClick={handleDownloadCV}>
               Download CV
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      <div className="section" id="About">
-        <div className="about-me">
+      <div className="section">
+        <motion.div
+          className="about-me"
+          id="About"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          variants={sectionVariants}
+        >
           <h1 className="about">About Me</h1>
           <p className="description">
             I'm AbdeLmajid Moumni (MjidOux), a full-stack developer skilled in
@@ -139,16 +174,24 @@ function Home() {
             projects with Jira. With a strong eye for design, I use Figma to
             create seamless user experiences.
           </p>
-        </div>
-        <div className="about-me" id="Experience">
+        </motion.div>
+        <motion.div
+          className="about-me"
+          id="Experience"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          variants={sectionVariants}
+        >
           <h1 className="about">Experience</h1>
           <div className="head">
             <div className="company">
-              <img
+              {/* <img
                 src="https://www.omegaupdate.ma/wp-content/uploads/2024/11/logiciel_omegagest__24_-removebg-preview.png"
                 alt="Omega Update logo"
                 className="omega"
-              />
+              /> */}
               <h1 className="company-name">Omega Update</h1>
             </div>
             <div>March 2025 to April 2025</div>
@@ -161,19 +204,26 @@ function Home() {
             ClickUp for task management and worked closely with the design team
             using Figma.
           </p>
-        </div>
-        <div className="projects">
+        </motion.div>
+        <motion.div
+          className="projects"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          variants={sectionVariants}
+        >
           <div className="open ">
             <h1>Projects</h1>
-            <RiExternalLinkLine className="icon" onClick={openLink}/>
+            <RiExternalLinkLine className="icon" onClick={openLink} />
           </div>
 
           <div className="fullpro">
             <div className="project">
               <img
-                src="https://www.jobnme.com/wp-content/uploads/2024/10/cropped-cropped-cropped-cropped-J-1-e1728299976752-1.png"
-                width={160}
-                alt="JobNme Logo"
+                src={`${process.env.PUBLIC_URL}/images/Screenshot 2025-12-02 170510.png`}
+                width={70}
+                alt="movies Logo"
                 className="jobnme"
               />
               <div className="info">
@@ -183,7 +233,7 @@ function Home() {
             </div>
             <div className="project">
               <img
-                src={`${process.env.PUBLIC_URL}/images/logo.webp`}
+                src={`${process.env.PUBLIC_URL}/images/Screenshot 2025-12-02 150504.png`}
                 width={70}
                 alt="movies Logo"
                 className="jobnme"
@@ -194,7 +244,7 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <footer id="Contact">
