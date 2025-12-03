@@ -47,8 +47,8 @@ function Home() {
   }, []);
 
   const handleContact = () => {
-    window.location.href =
-      "mailto:abdelmjidmoumni78@gmail.com?subject=Contacting You&body=Hello, I would like to get in touch!";
+    window.location.href = "mailto:abdelmjidmoumni78@gmail.com?subject=Contacting You&body=Hello, I would like to get in touch!";
+    console.log("Contact button clicked");
   };
 
   const handleDownloadCV = () => {
@@ -229,6 +229,7 @@ function Home() {
               <div className="info">
                 <h1 className="company-name">Jobnme</h1>
                 <p>Developed using React.js, Laravel an MySql for Database</p>
+                 <FaGithub size={25} className="icon"/>
               </div>
             </div>
             <div className="project">
@@ -241,6 +242,7 @@ function Home() {
               <div className="info">
                 <h1 className="company-name">Movies Star</h1>
                 <p>Developed using React.js, Laravel an MySql for Database</p>
+                <FaGithub size={25} className="icon"/>
               </div>
             </div>
           </div>

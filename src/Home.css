@@ -124,9 +124,8 @@ button {
   transition: all 0.1s ease;
 }
 .click1:hover {
-  background: none;
+  background-color: #000;
   color: #fff;
-  border: #fff 2px solid;
 }
 .click2:hover {
   background-color: #fff;
@@ -163,6 +162,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 15px;
   color: #fff;
 }
 .head {
@@ -197,7 +197,8 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  padding: 20px 0;
+  gap: 20px;
   color: #fff;
 }
 .fullpro {
@@ -250,6 +251,10 @@ button {
 .icon {
   font-size: 20px;
   cursor: pointer;
+  transition: all 0.3 ease-in-out;
+}
+.icon:hover {
+  color: #1cb8f1;
 }
 .jobnme {
   border-radius: 10px;
