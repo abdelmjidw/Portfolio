@@ -229,7 +229,8 @@ function Home() {
               <div className="info">
                 <h1 className="company-name">Jobnme</h1>
                 <p>Developed using React.js, Laravel an MySql for Database</p>
-                 <FaGithub size={25} className="icon"/>
+                <div className="icon-git">  <FaGithub size={25} className="icon"/></div>
+               
               </div>
             </div>
             <div className="project">
@@ -242,7 +243,8 @@ function Home() {
               <div className="info">
                 <h1 className="company-name">Movies Star</h1>
                 <p>Developed using React.js, Laravel an MySql for Database</p>
-                <FaGithub size={25} className="icon"/>
+                <div className="icon-git"><FaGithub size={25} className="icon"/></div>
+                
               </div>
             </div>
           </div>

@@ -222,10 +222,8 @@ button {
 .info {
   display: flex;
   flex-direction: column;
-  align-items: start;
   justify-content: center;
   gap: 5px;
-  width: fit-content;
 }
 .open {
   display: flex;
@@ -256,15 +254,20 @@ button {
 .icon:hover {
   color: #1cb8f1;
 }
+.icon-git{
+  display: flex;
+  justify-content: end;
+  margin-top: 2px;
+}
 .jobnme {
   border-radius: 10px;
   width: 100%;
-  height: auto;
+  height: 100%;
   aspect-ratio: 16/9;
   transition: all 0.3s ease;
 }
 .jobnme:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 .info h1 {
   font-size: 25px;
@@ -334,6 +337,7 @@ footer {
 
   .home {
     gap: 15px;
+    height: 80vh;
   }
 
   .me {
@@ -376,11 +380,21 @@ footer {
   .company {
     flex-direction: column;
   }
-
+  
   .descri {
     width: 90%;
     font-size: 14px;
     padding: 0 10px;
+  }
+  .fullpro {
+    width:90%;
+    grid-template-columns: 1fr;
+  }
+  .project:nth-child(2){
+    margin-top: 65px;
+  }
+  .jobnme{
+    width: 100%;
   }
 
   .footer-content h3 {
