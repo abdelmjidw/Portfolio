@@ -121,10 +121,11 @@ button {
   background: none;
   color: #fff;
   border: #fff 2px solid;
-  transition: all 0.1s ease;
+  transition: all 0.1s ease-in-out;
 }
 .click1:hover {
-  background-color: #000;
+  border: #fff 2px solid;
+  background: none;
   color: #fff;
 }
 .click2:hover {
